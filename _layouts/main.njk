@@ -1,0 +1,25 @@
+{% extends "default.njk" %}
+
+{% block navlink %}
+
+{% endblock %}
+
+{% block header %}
+  <h1 class="header__title header__title--main"><span>{{ page.title }}</span></h1>
+  <span class="header__desc header__desc--main">{{ site.desc }}</span>
+{% endblock %}
+
+{% block sidelist %}
+  {% if site.pages %}
+    <dt>Страницы</dt>
+    {% for link, name in site.pages %}
+      <dd><a href="/{{ link }}">{{ name }}</a></dd>
+    {% endfor %}
+  {% endif %}
+  {% if page.links %}
+    <dt>Ссылки</dt>
+    {% for item in page.links %}
+      <dd><a target="_blank" href="{{ item.link }}">{{ item.name }}</a></dd>
+    {% endfor %}
+  {% endif %}
+{% endblock %}

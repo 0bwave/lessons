@@ -1,0 +1,30 @@
+{% if page.authors %}
+  {% set authorl %}{{ page.authors | length }}{% endset %}
+  {% if authorl == 1 %}
+    <dt>Автор</dt>
+  {% else %}
+    <dt>Авторы</dt>
+  {% endif %}
+  {% for item in page.authors %}
+    <dd><a target="_blank" href="https://github.com/{{ item }}">{{ item }}</a></dd>
+  {% endfor %}
+{% endif %}
+
+{% if page.editors %}
+  {% set editorl %}{{ page.editors | length }}{% endset %}
+  {% if editorl == 1 %}
+    <dt>Редактировал</dt>
+  {% else %}
+    <dt>Редактировали</dt>
+  {% endif %}
+  {% for item in page.editors %}
+    <dd><a target="_blank" href="https://github.com/{{ item }}">{{ item }}</a></dd>
+  {% endfor %}
+{% endif %}
+
+{% if page.links %}
+  <dt>Ссылки</dt>
+  {% for item in page.links %}
+    <dd><a target="_blank" href="{{ item.link }}">{{ item.name }}</a></dd>
+  {% endfor %}
+{% endif %}

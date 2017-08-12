@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Rubik:400,400i,500,500i&subset=cyrillic');
+
+:root {
+  --base-line: 24px;
+  --base-line-small: 20px;
+}
+
+/* Типография */
+
+html, body {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+body {
+  padding-bottom: 48px;
+
+  font-family: 'Rubik', Arial, sans-serif;
+
+  background: #252525;
+  color: #e3e3e3;
+}
+
+/* Links */
+
+a {
+  padding-bottom: .05em;
+  color: #b9b9b9;
+  text-decoration: none;
+  border-bottom: 1px solid #525252;
+  transition: .2s;
+}
+a:hover {
+    color: #f7f7f7;
+    border-bottom-color: #f7f7f7;
+    transition: .2s;
+}
+a img {
+    border: none;
+}
+
+/* Headings */
+
+h1.title, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+
+  color: #f7f7f7;
+}
+
+h1.title {
+  font-size: 60px;
+  line-height: 64px;
+}
+h1 {
+  font-size: 48px;
+  line-height: 52px;
+}
+h2 {
+  font-size: 36px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 32px;
+}
+h4 {
+  font-size: 21px;
+  line-height: 32px;
+}
+h5 {
+  font-size: 18px;
+  line-height: 28px;
+}
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+
+/* Top Space */
+
+p + h2, p + h3, p + h4, p + h5, p + h6,
+ul + h2, ul + h3, ul + h4, ul + h5, ul + h6,
+ol + h2, ol + h3, ol + h4, ol + h5, ol + h6,
+blockquote + h2, blockquote + h3, blockquote + h4, blockquote + h5, blockquote + h6,
+hr + h2, hr + h3, hr + h4, hr + h5, hr + h6,
+pre + h2, pre + h3, pre + h4, pre + h5, pre + h6,
+table + h2, table + h3, table + h4, table + h5, table + h6 {
+  margin-top: 24px;
+}
+
+/* Lists */
+
+ul, ol, ul & ul, ol & ul, ol & ul, ol  & ol {
+  margin: 0 0 0 24px;
+}
+ol ol li {
+  list-style-type: lower-alpha;
+}
+ol ol ol li {
+  list-style-type: lower-roman;
+}
+
+dl dt {
+	font-weight: bold;
+}
+dd {
+	margin-left: var(--base-line);
+}
+
+/* Block Tags */
+
+p, blockquote, hr, pre, ol, ul, dl, table {
+	margin-bottom: 16px;
+}
+
+hr {
+  border: none;
+	border-bottom: 1px solid #525252;
+	margin-top: -1px;
+}
+
+blockquote {
+  padding-left: 1rem;
+  border-left: 4px solid #525252;
+  font-style: italic;
+}
+blockquote & p {
+  margin-bottom: .5rem;
+}
+
+/* Inline */
+
+sub,
+sup {
+  font-size: .5em;
+	line-height: 0;
+	margin-left: .5rem;
+	position: relative;87.5%
+}
+
+pre, code {
+  font-family: 'Fira Mono', monospace;
+  font-size: 14px;
+}
+
+p img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h2:hover .anchor ,h3:hover .anchor ,h4:hover .anchor {
+  position: relative;
+
+  color: #b9b9b9;
+  border: none;
+}
+
+
+h2:hover .anchor::after,h3:hover .anchor::after,h4:hover .anchor::after {
+  content: '***';
+
+  position: absolute;
+  top: 0;
+
+  margin-left: 1em;
+
+  font-family: 'Fira Mono', monospace;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+
+  color: #b9b9b9;
+  border-bottom: 1px solid #525252;
+}
+
+h2:hover .anchor:hover::after ,h3:hover .anchor:hover::after ,h4:hover .anchor:hover::after {
+  color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+
+/* Верстка */
+
+body {
+  padding: var(--base-line-small);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10vh;
+}
+
+.nav__logo {
+  width: 36px;
+}
+
+.nav__link {
+  margin-left: var(--base-line-small);
+}
+
+.nav__link--back {
+  flex-grow: 3;
+}
+
+.nav__link--edit {
+  display: none;
+}
+
+header {
+  margin-bottom: 10vh;
+}
+
+.header__title {
+  margin-top: 0;
+}
+
+.header__title--main span {
+  padding: 0 .2em;
+
+  background: #f7f7f7;
+  color: #252525;
+}
+
+.header__desc {
+  font-size: 18px;
+}
+
+.header__desc--main {
+  text-transform: uppercase;
+}
+
+aside {
+  margin-bottom: 10vh;
+}
+
+aside::before {
+  content: "---";
+
+  font-family: 'Fira Mono', monospace;
+
+  color: #525252;
+}
+
+.side__list dt {
+  margin-top: 16px;
+}
+
+.side__list dt:first-of-type {
+  margin-top: 0;
+}
+
+.side__list dd {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+main {
+  margin: 0 0 10vh 0;
+}
+
+main::before {
+  content: "+++";
+
+  font-family: 'Fira Mono', monospace;
+
+  color: #525252;
+}
+
+.bar {
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .5em var(--base-line-small);
+  box-sizing: border-box;
+
+  background: #252525;
+  transition: .5s;
+}
+
+.bar--on {
+  bottom: 0;
+  transition: .5s;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: var(--base-line);
+  }
+
+  nav {
+    margin-top: 10vh;
+  }
+
+  .nav__link--edit {
+    display: inline;
+  }
+
+  aside {
+    position: relative;
+  }
+
+  aside::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  main {
+    position: relative;
+    max-width: 840px;
+    margin-left: auto;
+  }
+
+  main::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: 184px;
+  }
+
+  nav, header, aside, .bar {
+    max-width: 840px;
+  }
+
+  .bar {
+    padding: .5em 0;
+    margin-left: 184px;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}

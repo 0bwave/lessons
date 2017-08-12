@@ -1,0 +1,13 @@
+{# Ссылка на предыдущую страницу #}
+
+{% set backlink %}
+{% for item in page.types %}
+{% if loop.last %}
+/
+{% else %}
+/{{item}}
+{% endif %}
+{% endfor %}
+{% endset %}
+
+<a class="nav__link nav__link--back" href="{{ backlink }}">Назад</a>

@@ -1,0 +1,9 @@
+{# Ссылка на главную страницу #}
+
+{% set pathlength %}
+{{ page.types | length }}
+{% endset %}
+
+{% if pathlength > 1 %}
+  <a class="nav__link" href="/">В начало</a>
+{% endif %}
