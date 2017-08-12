@@ -37,7 +37,11 @@
 
     <main>
       {% block content %}
-        {{ content | safe }}
+        {% if page.published == false %}
+          Скоро...
+        {% else %}
+          {{ content | safe }}
+        {% endif %}
       {% endblock %}
     </main>
 
