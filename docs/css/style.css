@@ -126,8 +126,8 @@ hr {
 
 blockquote {
   padding-left: 1rem;
+  margin-left: 1rem;
   border-left: 4px solid #525252;
-  font-style: italic;
 }
 blockquote & p {
   margin-bottom: .5rem;
@@ -199,7 +199,7 @@ nav {
 }
 
 .nav__logo {
-  width: 36px;
+  height: 36px;
 }
 
 .nav__link {
@@ -315,7 +315,7 @@ main::before {
 
   aside::before {
     position: absolute;
-    top: 0;
+    top: -24px;
     right: 0;
   }
 
@@ -327,7 +327,7 @@ main::before {
 
   main::before {
     position: absolute;
-    top: 0;
+    top: -24px;
     right: 0;
   }
 }

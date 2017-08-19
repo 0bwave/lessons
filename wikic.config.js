@@ -4,9 +4,9 @@ module.exports = {
   toc: {
     selectors: 'h2, h3, h4',
   },
-  pages: {
-    'about': 'О проекте',
-    'support': 'Поддержать'
-  },
+  // pages: {
+  //   'about': 'О проекте',
+  //   'support': 'Поддержать'
+  // },
   excludes: ['README.md']
 };
